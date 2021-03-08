@@ -1,0 +1,165 @@
+.categories-carousel-container-container {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.categories-carousel-container-container:before {
+    background-image: url(https://demo.colorlib.com/illdy/wp-content/themes/illdy/layout/images/testiomnials-background.jpg) !important;
+    background-attachment: scroll !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.categories-carousel-container {
+    padding: 1em;
+}
+
+.all-categories, .main-account {
+    background: white;
+    border-radius: 5px;
+    padding: 1em 1em 0 1em;
+}
+
+.all-categories-heading {
+    text-align: center;
+}
+
+.all-categories-divider {
+    margin: 0 -.5em 0 -.5em;
+}
+
+.all-categories-list {
+    padding: .5em 0 0 0;
+    margin-bottom: 0;
+}
+
+.all-categories-list-item {
+    background: #e9ecef;
+    color: #343a40;
+    border: none;
+    padding: 0;
+    list-style-type: none;
+    margin-left: -1em;
+    margin-right: -1em;
+    font-weight: 500;
+}
+
+.all-categories-list-item:nth-child(even){background: white;}
+
+.all-categories-list-item:last-child,
+.all-categories-list-item:last-child a {
+    border-radius: 0 0 5px 5px;
+}
+
+.all-categories-list-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    padding: .25em 1em;
+}
+
+.all-categories-list-link:hover {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.product-groups {
+    padding: 0 0 .8em 0;
+}
+
+.product-groups-all-products,
+.product-groups-on-discount, 
+.product-groups-featured,
+.product-groups-most-popular,
+.product-groups-you-may-like {
+    color: white;
+    font-weight: 500;
+    font-style: italic;
+    margin-right: .5em;
+}
+
+.product-groups-you-may-like {
+    margin-right: 0;
+}
+
+.product-groups-all-products:hover,
+.product-groups-on-discount:hover, 
+.product-groups-featured:hover,
+.product-groups-most-popular:hover,
+.product-groups-you-may-like:hover {
+    color: gold;
+    text-decoration: none;
+}
+
+.carousel-container {
+    border-radius: 5px;
+}
+
+.carousel-container img {
+    width: 100%;
+    height: 33.3333%;
+}
+
+.main-account-icon-container-container {
+    display: flex;
+    justify-content: center;
+}
+
+.main-account-icon-container {
+    display: flex;
+    background: #b9c1c8;
+    border-radius: 50%;
+}
+
+.main-account-icon {
+    color: white;
+    font-size: 1.3em;
+    margin: .75em;
+}
+
+.main-account-welcome {
+    text-align: center;
+    margin: 1em;
+    line-height: 1.35;
+}
+
+.main-account-welcome-body {
+    display: block;
+    font-size: .95em;
+    font-weight: bold;
+}
+
+.main-account-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.main-account-join-btn,
+.main-account-signin-btn {
+    width: 5em;
+    border-radius: 18px;
+    background: gold;
+    border-color: gold;
+    color: blue;
+}
+
+.main-account-join-btn:hover,
+.main-account-signin-btn:hover {
+    background: #007bff;
+    border-color: #007bff;
+    color: white;
+}

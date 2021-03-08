@@ -1,0 +1,48 @@
+.cta-info-container {
+    margin-bottom: 3em;
+}
+
+.cta-info-row {
+    padding: 0 1em;
+    color: blue;
+    background: gold;
+}
+
+.cta-info-col {
+    display: flex;
+    padding: .5em 1em;
+}
+
+.cta-info-icon-container {
+    display: inline-block;
+    border-radius: 50%;
+    background: white;
+    margin-right: 1em;
+}
+
+.cta-info-icon {
+    margin: 1em;
+}
+
+.cta-info-icon-address {
+    display: inline-flex;
+    justify-content: center;
+    width: 16px;
+}
+
+.cta-info-text-container {
+    display: inline-block;
+}
+
+.cta-info-text-container-address {
+    line-height: .9em;
+}
+
+.cta-info-text {
+    display: block;
+}
+
+.cta-info-text-address {
+    display: inline;
+    font-weight: normal;
+}

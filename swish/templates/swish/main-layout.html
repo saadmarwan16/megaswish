@@ -1,0 +1,194 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>{% block title %}{% endblock %} - MegaSwish</title>
+
+        <link rel="icon" href="{% static 'swish/images/favicon.ico' %}">
+
+        <link rel="stylesheet" href="{% static 'swish/styles/fontawesome-all.min.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+            crossorigin="anonymous"
+        >
+
+        {% block stylesheets %}{% endblock %}
+
+        <link rel="stylesheet" href="{% static 'swish/styles/header.css' %}">
+        <link rel="stylesheet" href="{% static 'swish/styles/footer.css' %}">
+        <link rel="stylesheet" href="{% static 'swish/styles/main.css' %}">
+    </head>
+
+    <body>
+        <div class="main-body">
+            <div class="header-main">
+                <div class="jumbotron header-main-row">
+                    <a href="index.html" class="navbar-brand header-brand-container">
+                        <img src="{% static 'swish/images/android-chrome-192x192.png' %}" width="30"
+                            height="30" class="d-inline-block align-top header-brand-image" alt="" 
+                            loading="lazy"
+                        >
+                        <span class="header-brand-name">MegaSwish</span>
+                    </a>
+    
+                    <form class="form-inline my-2 my-lg-0 header-search-input-container">
+                        <input class="form-control mr-sm-2 header-search-input" type="search" 
+                            placeholder="Search" aria-label="Search"
+                        >
+                        <button class="btn btn-outline-success my-2 my-sm-0 header-search-btn" type="submit">
+                            <i class="fas fa-search header-search-icon"></i>
+                        </button>
+                    </form>
+    
+                    <div class="header-main-cart-container-container">
+                        <span class="header-main-cart-container">
+                            <a href="#" class="header-main-cart">
+                                <i class="fa fa-shopping-cart"></i> My Cart - $ 
+                                <span class="header-main-cart-price">0</span>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            {% block body %}{% endblock %}
+    
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row footer-main">
+                        <div class="col-12 col-md-6">
+                            <div class="footer-info-contact">
+                                <h4 class="footer-info-contact-header">Products Information & Contact</h4>
+                                <div class="footer-info-contact-widget">
+                                    <ul class="footer-info-contact-widget-list">
+                                        <li class="footer-info-contact-widget-list-item">
+                                            <a href="#" class="footer-info-contact-widget-list-item-link">
+                                                Pricing
+                                            </a>
+                                        </li>
+                                        <li class="footer-info-contact-widget-list-item">
+                                            <a href="#" class="footer-info-contact-widget-list-item-link">
+                                                Terms
+                                            </a>
+                                        </li>
+                                        <li class="footer-info-contact-widget-list-item">
+                                            <a href="#" class="footer-info-contact-widget-list-item-link">
+                                                Affiliates
+                                            </a>
+                                        </li>
+                                        <li class="footer-info-contact-widget-list-item">
+                                            <a href="#" class="footer-info-contact-widget-list-item-link">
+                                                Blog
+                                            </a>
+                                        </li>
+                                        <li class="footer-info-contact-widget-list-item">
+                                            <a href="#" class="footer-info-contact-widget-list-item-link">
+                                                Announcements
+                                            </a>
+                                        </li>
+                                        <li class="footer-info-contact-widget-list-item">
+                                            <a href="#" class="footer-info-contact-widget-list-item-link">
+                                                Address <br> Kooney S. Presidential Plot, Kings Cottage, Accra
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="footer-send-mail">
+                                <h4 class="footer-send-mail-header">Contact Us</h4>
+    
+                                <form action="{% url 'contact_us' %}" class="footer-send-mail-form"
+                                    method="post"
+                                >
+                                    {% csrf_token %}
+
+                                    <div class="container-fluid footer-send-mail-form-subsection">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-12 col-sm-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="name" class="footer-send-mail-label">
+                                                        Your Name (required):
+                                                    </label>
+                                                    <input required id="name" class="form-control" type="text" 
+                                                        name="name" placeholder="Your Name"
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12 col-sm-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="name" class="footer-send-mail-label">
+                                                        Your Email (required):
+                                                    </label>
+                                                    <input required id="email" class="form-control" 
+                                                        type="email" name="email" placeholder="Your Email"
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <label for="subject" class="footer-send-mail-label">
+                                            Subject (optional):
+                                        </label>
+                                        <input id="subject" class="form-control" type="text" name="subject" 
+                                            placeholder="Subject"
+                                        >
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <label for="message" class="footer-send-mail-label">
+                                            Message (required):
+                                        </label>
+                                        <textarea required id="message" class="form-control" name="message" 
+                                            placeholder="Message"
+                                        >
+                                        </textarea>
+                                    </div>
+    
+                                    <div class="footer-send-mail-submit-btn-container">
+                                        <input class="btn btn-primary footer-send-mail-submit-btn" 
+                                            type="submit" value="Send"
+                                        >
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="footer-social-copyright-container">
+                    <div class="row jumbotron footer-social-copyright">
+                        <div class="col-12 col-md-6 footer-social">
+                            <a href="#" class="footer-facebook">
+                                <i class="fab fa-facebook footer-facebook-icon"></i>
+                            </a>
+                            <a href="#" class="footer-instagram">
+                                <i class="fab fa-instagram footer-instagram-icon"></i>
+                            </a>
+                            <a href="#" class="footer-twitter">
+                                <i class="fab fa-twitter footer-twitter-icon"></i>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6 footer-copyright">
+                            MegaSwish.©2021.All Rights Reserved
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div class="vertical-fixed-nav"></div>
+        <div class="horizontal-fixed-nav"></div>
+
+        {% block scripts %}{% endblock %}
+    </body>
+</html>

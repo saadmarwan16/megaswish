@@ -1,0 +1,41 @@
+{% extends "swish/register-login.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block body %}
+    <div class="register-login-form-container">
+        {% include "swish/register-login-message.html" %}
+
+        <h3 class="register-login-form-heading">Login</h3>
+
+        <form action="{% url 'login_view' %}" class="register-login-form" method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <input autofocus required class="form-control" type="text" name="username"
+                    placeholder="Username"
+                >
+            </div>
+
+            <div class="form-group">
+                <input required class="form-control" type="password" name="password"
+                    placeholder="Password"
+                >
+            </div>
+
+            <div class="form-submit-btn-container">
+                <input type="submit" value="Login" class="btn btn-primary form-submit-btn">
+            </div>
+        </form>
+
+        <small  class="register-login-siginin-register">
+            <span>Forgot Password?</span>
+            <b><a href="{% url 'reset_password' %}"> Reset</a></b>
+        </small>
+        <small class="register-login-siginin-register">
+            New to MegaSwish?<a href="{% url 'start_registration' %}"><b> Register</b></a>
+        </small>
+    </div>
+{% endblock %}

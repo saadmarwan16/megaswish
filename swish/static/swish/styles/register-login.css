@@ -1,0 +1,139 @@
+.register-login-container-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register-login-container {
+    padding: 1em;
+    width: 100%;
+}
+
+.register-login-logo-container-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-login-logo-container {
+    font-size: 1.25rem;
+    display: inline-flex;
+    margin: 0 -1.75em 0 -1.75em;
+    height: 80px;
+    align-items: center;
+    padding: 0 .5em;
+}
+
+.register-login-logo-container:hover {
+    border: 2px solid gold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.register-login-logo {
+    transform: scale(1.5);
+    width: 80px;
+    height: 80px;
+}
+
+.register-login-brand-name {
+    font-size: 1.15em;
+    font-weight: bold;
+    padding: 1em 0 .3em .3em;
+}
+
+.register-login-brand-name:hover {
+    text-decoration: inherit;
+}
+
+.gold, .blue, .black, .sea-blue, .violet {
+    margin-left: -.25em;
+}
+
+.gold {
+    color: goldenrod;
+}
+
+.blue {
+    color: blue;
+}
+
+.black {
+    color: #242320;
+}
+
+.sea-blue {
+    color: #007bff;
+}
+
+.violet {
+    color: #6a4d8a;
+}
+
+.messages {
+    text-align: center;
+}
+
+/* .register-login-alert-container {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+button {
+    padding: 3px .5em;
+} */
+
+.register-login-form-container {
+    margin: 1em auto;
+    border-radius: 5px;
+    background: #e9ecef;
+    padding: 1em;
+    border: 1px solid lightgray;
+}
+
+.register-login-form-heading {
+    text-align: center;
+}
+
+.form-submit-btn:hover {
+    transform: scale(1.1);
+}
+
+.register-login-terms, 
+.register-login-siginin-register {
+    display: block;
+    text-align: center;
+    padding: .5em 1em;
+    color: gray;
+}
+
+.confirm-registration {
+    margin-top: 1em;
+}
+
+.confirm-registration-heading {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.password-specs-container {
+    padding: 0;
+}
+
+.password-specs-list {
+    padding: 0 0 0 1.2em;
+    margin-bottom: 0;
+}
+
+.password-specs-list-item {
+    margin-left: -0.5em;
+}
+
+.password-specs-list-item::marker {
+    content: "\2713";
+    font-weight: bold;
+    color: green;
+}

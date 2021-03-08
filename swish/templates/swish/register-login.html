@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %} - MegaSwish</title>
+
+        <link rel="icon" href="{% static 'swish/images/favicon.ico' %}">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+            crossorigin="anonymous"
+        >
+
+        <link rel="stylesheet" href="{% static 'swish/styles/register-login.css' %}">
+        <link rel="stylesheet" href="{% static 'swish/styles/main.css' %}">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="register-login-container-container">
+                <div class="register-login-container">
+                    <div class="register-login-logo-container-container">
+                        <a href="{% url 'index' %}" class="register-login-logo-container">
+                            <img src="{% static 'swish/images/android-chrome-192x192.png' %}" alt=""
+                                width="30" height="30" class="d-inline-block register-login-logo" loading="lazy"
+                            >
+            
+                            <span class="register-login-brand-name">
+                                <span class="gold">M</span>
+                                <span class="blue">e</span>
+                                <span class="black">g</span>
+                                <span class="sea-blue">a</span>
+                                <span class="black">S</span>
+                                <span class="violet">w</span>
+                                <span class="blue">i</span>
+                                <span class="gold">s</span>
+                                <span class="violet">h</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

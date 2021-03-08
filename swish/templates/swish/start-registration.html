@@ -1,0 +1,51 @@
+{% extends "swish/register-login.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <div class="register-login-form-container">
+        {% include "swish/register-login-message.html" %}
+
+        <h3 class="register-login-form-heading">Registration</h3>
+
+        <form action="{% url 'start_registration' %}" method="post" class="register-login-form">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <input autofocus required class="form-control" type="text" name="firstname"
+                    placeholder="First name" maxlength="191"
+                >
+            </div>
+
+            <div class="form-group">
+                <input required class="form-control" type="text" name="lastname"
+                    placeholder="Last name" maxlength="191"
+                >
+            </div>
+
+            <div class="form-group">
+                <input required class="form-control" type="text" name="username"
+                    placeholder="Username" maxlength="191"
+                >
+            </div>
+
+            <div class="form-group">
+                <input required class="form-control" type="email" name="email"
+                    placeholder="E-mail" maxlength="191"
+                >
+            </div>
+
+            <div class="form-submit-btn-container">
+                <input type="submit" value="Continue" class="btn btn-primary form-submit-btn">
+            </div>
+        </form>
+        <small class="register-login-terms">
+            <span>By registering you agree to MegaSwish's </span>
+            <b><a href="#">Terms of Membership</a></b> <span>and</span>
+            <b><a href="#">Privacy Policy</a></b>
+        </small>
+        <small class="register-login-siginin-register">
+            <span>Already have an account? </span><b><a href="{% url 'login_view' %}"> Sign in</a></b>
+        </small>
+    </div>
+{% endblock %}

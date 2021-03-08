@@ -1,0 +1,337 @@
+{% extends "swish/main-layout.html" %}
+
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'swish/styles/carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'swish/styles/cta.css' %}">
+    <link rel="stylesheet" href="{% static 'swish/styles/categories.css' %}">
+    <link rel="stylesheet" href="{% static 'swish/styles/testimonials.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid categories-carousel-container-container">
+        <div class="row categories-carousel-container">
+            <div class="col-2 all-categories">
+                <h5 class="all-categories-heading">Categories</h5>
+                <hr class="all-categories-divider">
+
+                <ul class="all-categories-list">
+                    {% for category in categories %}
+                        <li class="all-categories-list-item">
+                            <a href="" class="all-categories-list-link">{{ category }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <div class="col-lg-7 col-12">
+                <div class="product-groups">
+                    <a href="#all-products" class="product-groups-all-products">All Products</a>
+                    <a href="#on-discount" class="product-groups-on-discount">On Discount</a>
+                    <a href="#featured" class="product-groups-featured">Featured</a>
+                    <a href="#most-popular" class="product-groups-most-popular">Most Popular</a>
+                    <a href="#you-may-like" class="product-groups-you-may-like">You May Like</a>
+                </div>
+
+                <div id="megaswish-logo" class="carousel slide" data-ride="carousel" loading="lazy">
+                    <ul class="carousel-indicators">
+                        <li data-target="#megaswish-logo" data-slide-to="0" class="active"></li>
+                        <li data-target="#megaswish-logo" data-slide-to="1"></li>
+                        <li data-target="#megaswish-logo" data-slide-to="2"></li>
+                    </ul>
+                    
+                    <div class="carousel-inner carousel-container">
+                        <div class="carousel-item active">
+                            <img src="{% static 'swish/images/perfect.png' %}" alt="Perfect" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'swish/images/perfect.png' %}" alt="Perfect" loading="lazy">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'swish/images/perfect.png' %}" alt="Perfect" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <a class="carousel-control-prev" href="#megaswish-logo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#megaswish-logo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-3 main-account">
+                <div class="main-account-icon-container-container">
+                    <span class="main-account-icon-container">
+                        <i class="fa fa-user main-account-icon"></i>
+                    </span>
+                </div>
+
+                <div class="main-account-welcome">
+                    <small class="main-account-welcome-body">Hello, Welcome</small>
+                    <small class="main-account-welcome-body">to MegaSwish</small>
+                </div>
+
+                <div class="main-account-buttons">
+                    <a href="{% url 'start_registration' %}" class="btn btn-primary main-account-join-btn">Join</a>
+                    <a href="{% url 'login_view' %}" class="btn btn-primary main-account-signin-btn">
+                        Sign in
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid cta-info-container">
+        <div class="row cta-info-row">
+            <div class="col-md-4 col-12  cta-info-col">
+                <div class="cta-info-icon-container">
+                    <i class="fas fa-envelope cta-info-icon"></i>
+                </div>
+                
+                <div class="cta-info-text-container">
+                    <strong class="cta-info-text">Send us a mail:</strong> mrghana30@gmail.com
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12 cta-info-col">
+                <div class="cta-info-icon-container">
+                    <i class="fas fa-phone cta-info-icon"></i>
+                </div>
+
+                <div class="cta-info-text-container">
+                    <strong class="cta-info-text">Give us a call:</strong> +(233) 553410106
+                </div>
+            </div>
+        
+            <div class="col-md-4 col-12 cta-info-col">
+                <div class="cta-info-icon-container">
+                    <i class="fas fa-map-marker-alt cta-info-icon cta-info-icon-address"></i>
+                </div>
+                
+                <div class="cta-info-text-container cta-info-text-container-address">
+                    <strong class="cta-info-text"> Address:</strong>
+                    <small class="cta-info-text-address">Kooney S. Presidential Plot,</small> <br />
+                    <small class="cta-info-text-address">Kings Cottage, Accra</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="all-products" class="container-fluid">
+        <section class="all-products-container-container">
+            <h4 class="all-products-heading">All Products</h4>
+
+            <div class="row category">
+                {% for number in numbers %}
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 product-container all-products-container">
+                        <a href="#" class="product-link">
+                            <div class="product-image all-product-image"></div>
+                            <div class="product-info all-products-info">
+                                <small class="product-name all-products-name">Black Top</small>
+                                <span class="product-price all-products-price">
+                                    <bdi><span class="product-price-symbol">$</span>35.00</bdi>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="featured-products-view-more">
+                <button class="btn btn-primary featured-products-view-more-btn">
+                    View more
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <div id="on-discount" class="container-fluid">
+        <section class="featured-products-container on-discount-products-container">
+            <h4 class="featured-products-heading">On Discount</h4>
+
+            <div class="row category">
+                {% for number in numbers %}
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 product-container all-products-container">
+                        <a href="#" class="product-link">
+                            <div class="product-image on-discount-product-image"></div>
+                            <div class="product-info">
+                                <small class="product-name all-products-name">Black Top</small>
+                                <div class="on-discount-product-price-was-container-container">
+                                    <s class="on-discount-product-price-was-container">
+                                        <span class="product-price all-products-price">
+                                            <bdi><s><span class="product-price-symbol">$</span>35.00</s></bdi>
+                                        </span>
+                                    </s>
+                                    <span class="on-discount-product-price-off-percent">-50%</span>
+                                </div>
+                                
+                                <div>
+                                    <span class="product-price all-products-price">
+                                        <bdi><span class="product-price-symbol">$</span>17.50</bdi>
+                                    </span>
+                                    <button title="Add to cart" 
+                                        class="btn btn-primary product-cart-btn on-discount-product-cart-btn"
+                                    >
+                                        <span class="fa fa-shopping-cart"></span> +
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="featured-products-view-more">
+                <button class="btn btn-primary featured-products-view-more-btn">
+                    View more
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <div id="featured" class="container-fluid">
+        <section class="featured-products-container">
+            <h4 class="featured-products-heading">Featured</h4>
+
+            <div class="row category">
+                {% for number in numbers %}
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 product-container">
+                        <div class="product-image featured-product-image"></div>
+
+                        <div class="product-info">
+                            <h5 class="product-name">
+                                <a href="#" class="product-link">Black Top</a>
+                            </h5>
+                            <span class="product-price">
+                                <bdi><span class="product-price-symbol">$</span>35.00</bdi>
+                            </span>
+                            <a href="#" class="btn btn-primary product-cart-btn">
+                                <span class="fa fa-shopping-cart"></span> Add to cart
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="featured-products-view-more">
+                <button class="btn btn-primary featured-products-view-more-btn">
+                    View more
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <div id="testimonials" class="carousel slide testimonials-carousel" data-ride="carousel" loading="lazy">
+        <ul class="carousel-indicators">
+            <li data-target="#testimonials" data-slide-to="0" class="active"></li>
+            <li data-target="#testimonials" data-slide-to="1"></li>
+            <li data-target="#testimonials" data-slide-to="2"></li>
+        </ul>
+        
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <section class="testimonials">
+                    <div class="testimonials-header-container">
+                        <h3 class="testimonials-header">Testimonials</h3>
+                    </div>
+                    <div class="testimonials-main-container">
+                        <div class="testimonials-image-container">
+                            <img class="testimonials-image" width="127" height="127" 
+                                src="https://demo.colorlib.com/wp-content/uploads/sites/58/2016/02/hombre-joven-cara-alegre-estudiante-127x127.jpg" loading="lazy"
+                            >
+                        </div>
+                        <div class="testimonials-content-container">
+                            <blockquote class="testimonials-content">
+                                <q>
+                                    Awesome theme with great design and awesome&nbsp;support.
+                                    If you don’t know how to code your own WordPress theme, but you still want
+                                    a good-looking website for your business, Illdy might be exactly what you 
+                                    need. It is a slick theme with a lot of of features to choose from.
+                                </q>
+                            </blockquote>
+                        </div>
+        
+                        <div class="testimonials-meta">
+                            <h6 class="testimonial-person-name">John Doe</h6>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="carousel-item">
+                <section class="testimonials">
+                    <div class="testimonials-header-container">
+                        <h3 class="testimonials-header">Testimonials</h3>
+                    </div>
+                    <div class="testimonials-main-container">
+                        <div class="testimonials-image-container">
+                            <img class="testimonials-image" width="127" height="127" 
+                                src="https://demo.colorlib.com/wp-content/uploads/sites/58/2016/02/hombre-joven-cara-alegre-estudiante-127x127.jpg" loading="lazy"
+                            >
+                        </div>
+                        <div class="testimonials-content-container">
+                            <blockquote class="testimonials-content">
+                                <q>
+                                    Awesome theme with great design and awesome&nbsp;support.
+                                    If you don’t know how to code your own WordPress theme, but you still want
+                                    a good-looking website for your business, Illdy might be exactly what you 
+                                    need. It is a slick theme with a lot of of features to choose from.
+                                </q>
+                            </blockquote>
+                        </div>
+        
+                        <div class="testimonials-meta">
+                            <h6 class="testimonial-person-name">John Doe</h6>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="carousel-item">
+                <section class="testimonials">
+                    <div class="testimonials-header-container">
+                        <h3 class="testimonials-header">Testimonials</h3>
+                    </div>
+                    <div class="testimonials-main-container">
+                        <div class="testimonials-image-container">
+                            <img class="testimonials-image" 
+                                src="https://demo.colorlib.com/wp-content/uploads/sites/58/2016/02/hombre-joven-cara-alegre-estudiante-127x127.jpg" loading="lazy"
+                            >
+                        </div>
+                        <div class="testimonials-content-container">
+                            <blockquote class="testimonials-content">
+                                <q>
+                                    Awesome theme with great design and awesome&nbsp;support.
+                                    If you don’t know how to code your own WordPress theme, but you still want
+                                    a good-looking website for your business, Illdy might be exactly what you 
+                                    need. It is a slick theme with a lot of of features to choose from.
+                                </q>
+                            </blockquote>
+                        </div>
+        
+                        <div class="testimonials-meta">
+                            <h6 class="testimonial-person-name">John Doe</h6>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <a class="carousel-control-prev" href="#testimonials" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#testimonials" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="{% static 'swish/scripts/categories.js' %}"></script>
+{% endblock %}

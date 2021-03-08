@@ -1,0 +1,28 @@
+# Main project
+*.sqlite3
+.env
+env/
+__pycache__/
+
+# Fashion app
+fashion/__pycache__/
+fashion/migrations/
+
+# Fragrance app
+fragrance/__pycache__/
+fragrance/migrations/
+
+# MegaSwish app
+megaswish/__pycache__/
+
+# Swish app
+swish/__pycache__/
+swish/migrations/
+
+# Swish React app
+swish_react/__pycache__/
+swish_react/node_modules/
+
+# Api app
+api/__pycache__/
+api/migrations/

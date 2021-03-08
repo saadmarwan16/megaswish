@@ -1,0 +1,125 @@
+.all-products-container-container,
+.featured-products-container {
+    background: white;
+    border-radius: 5px;
+}
+
+.all-products-container-container,
+.on-discount-products-container {
+    margin-bottom: 3em !important;
+}
+
+.all-products-heading,
+.featured-products-heading {
+    margin: 0;
+    padding: .5em 0 1em .25em;
+    font-style: italic;
+}
+
+.category {
+    background: white;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.product-container {
+    padding: .5em;
+}
+
+.product-image {
+    width: 100%;
+    padding-top: calc(100% / (4 / 5));
+    border-radius: 5px;
+    background-image: url("https://demo.colorlib.com/tyche/wp-content/uploads/sites/64/2017/06/woman-1477091_1920-255x320.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.all-product-image,
+.on-discount-product-image {
+    border-radius: 5px;
+}
+
+.all-products-name {
+    font-weight: 500;
+}
+
+.all-products-price {
+    padding-bottom: 0 !important;
+}
+
+.on-discount-product-price-was-container-container {
+    padding: 0 0 .5em 0;
+}
+
+.on-discount-product-price-was-container {
+    display: inline-block;
+}
+
+.on-discount-product-price-off-percent {
+    padding: .1em .5em .2em .5em;
+    margin-left: .25em;
+    float: right;
+    background: gold;
+    color: blue;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.on-discount-product-cart-btn {
+    float: right;
+    padding: 0 4px !important;
+}
+
+.product-image:hover {
+    background-size: 175%;
+}
+
+.product-info {
+    text-align: left;
+    padding: 0 0 0 .5em;
+    margin-bottom: .5em;
+}
+
+.product-name {
+    display: block;
+    margin-bottom: 0;
+}
+
+.product-link {
+    color: black;
+}
+
+.product-link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.product-price {
+    display: inline-block;
+    font-weight: bold;
+    padding-bottom: .5em;
+}
+
+.product-cart-btn {
+    padding: 6px 8px;
+    color: blue;
+    background: gold;
+    border-color: gold;
+}
+
+.featured-products-view-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.featured-products-view-more-btn {
+    border-radius: 2em;
+}
+
+.featured-products-view-more-btn:hover {
+    transform: scale(1.1);
+}

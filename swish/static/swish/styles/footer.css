@@ -1,0 +1,108 @@
+.footer-main {
+    background-color: #292825;
+}
+
+.footer-info-contact, .footer-send-mail {
+    width: 100%;
+    padding: 3em 0;
+}
+
+.footer-info-contact {
+    padding-left: 2em;
+}
+
+.footer-info-contact-widget-list {
+    font-size: 1rem;
+    font-family: lato;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-info-contact-widget-list-item {
+    color: white;
+    width: 100%;
+    padding-left: 2em;
+    position: relative;
+    line-height: 38px;
+}
+
+.footer-info-contact-widget-list-item::before {
+    content: "\203A";
+    font-family: fontawesome;
+    color: #8c979e;
+    position: absolute;
+    left: 0;
+    line-height: 38px;
+}
+
+.footer-info-contact-widget-list-item-link {
+    color: #8c979e;
+    background-color: transparent;
+    line-height: 33px;
+    transition: all .3s;
+}
+
+.footer-info-contact-widget-list-item-link:hover {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.footer-send-mail-header {
+    color: white;
+    text-align: center;
+}
+
+.footer-info-contact-header, .footer-send-mail-label {
+    color: white;
+}
+
+.footer-send-mail-form-subsection {
+    padding: 0px;
+}
+
+.footer-send-mail-submit-btn {
+    float: right;
+}
+
+.footer-social-copyright {
+    border-radius: 0px;
+    margin: 0px !important;
+    padding: 1em !important;
+    background: #242320;
+}
+
+.footer-facebook, .footer-instagram, .footer-twitter {
+    margin: .5em;
+}
+
+.footer-facebook:hover, .footer-instagram:hover, .footer-twitter:hover {
+    text-decoration: none;
+}
+
+.footer-facebook-icon, .footer-instagram-icon, .footer-twitter-icon {
+    color: white;
+    font-size: 1.5em;
+}
+
+.footer-facebook-icon:hover, .footer-instagram-icon:hover, .footer-twitter-icon:hover, .footer-send-mail-submit-btn:hover {
+    transform: scale(1.1);
+}
+
+.footer-facebook-icon:hover {
+    color: blue;
+}
+
+.footer-instagram-icon:hover {
+    color: blueviolet;
+}
+
+.footer-twitter-icon:hover {
+    color: dodgerblue;
+}
+
+.footer-copyright {
+    text-align: right;
+    color: antiquewhite;
+}
